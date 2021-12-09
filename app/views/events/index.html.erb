@@ -1,0 +1,36 @@
+<div class="banner" style="background-color: black;   background-repeat: no-repeat;
+  background-size:100vw 100vh;">
+  <div class="d-flex justify-content-between">
+    <a href="#" class="btn-primary nav-bar-button rounded">About</a>
+    <a href="/events" class="btn-primary nav-bar-button rounded">Events</a>
+    <a href="#" class="btn-primary nav-bar-button rounded">Board Members</a>
+    <a href="#" class="btn-primary nav-bar-button rounded">Contact us</a>
+  </div>
+  <div class="d-flex center">
+    <div class="container">
+      <%# <div class="mt-5"> %>
+      <h1>UCI Alumni Association Events</h1>
+      <% @events.each do |event| %>
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= event.name %></h2>
+              <p><%= event.description %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <%# </div> %>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Created by Louis Yasuhiro
+  </div>
+</div>
